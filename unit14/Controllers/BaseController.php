@@ -8,7 +8,7 @@
 
         public function view($path, $data=[]){
             extract($data);
-            require_once("./Views2/". $path);
+            require_once("./Views/". $path);
         }
     }
 ?>
