@@ -29,10 +29,6 @@
     <hr>
         <form action="category_edit_process.php" method="POST" role="form" enctype="multipart/form-data">
             <div class="form-group">
-                <label for="">id</label>
-                <input type="text" class="form-control" id="" placeholder="nhập ID" name="ids" value="<?= $category['id'] ?>">
-            </div>
-            <div class="form-group">
                 <label for="">Name</label>
                 <input type="hidden" name="id" value="<?= $category['id'] ?>">
                 <input type="text" class="form-control" id="" placeholder="" name="name" value="<?= $category['category_name'] ?>">

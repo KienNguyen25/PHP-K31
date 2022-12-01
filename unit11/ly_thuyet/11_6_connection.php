@@ -1,9 +1,5 @@
 <?php
-    define("HOST","localhost");
-    define("USER","root");
-    define("PASSWORD","");
-    define("DB_NAME","blog");
-    
+   require_once('config.php');
    class Connection{
     var $conn;
     
@@ -15,4 +11,6 @@
         }
     }
    }
+  $obj = new Connection();
+  $obj->conn->query();
 ?>

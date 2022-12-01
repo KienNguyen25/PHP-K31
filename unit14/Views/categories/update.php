@@ -15,27 +15,23 @@
 </head>
 <body>
     <div class="container">
-    <h3 align="center">DevMind - Education And Technology Group</h3>
     <h3 align="center">Add New Category</h3>
     <hr>
-        <form action="category_add_process.php" method="POST" role="form" enctype="multipart/form-data">
-            <div class="form-group">
+    <form action="index.php?mod=category&act=update" method="POST" role="form" enctype="multipart/form-data">
+    <input type="hidden" id="" placeholder="" name="id" value="<?= $category['id'] ?? ''?>">
+    <div class="form-group">
                 <label for="">Name</label>
-                <input type="text" class="form-control" id="" placeholder="" name="name">
+                <input type="text" class="form-control" id="" placeholder="" name="category_name" value="<?= $category['category_name'] ?? ''?>">
+            </div>
+            <div class="form-group">
+                <label for="">Description</label><br>
+                <textarea name="category_description" id="" cols="50" rows="10" ><?= $category['category_description'] ?? '' ?></textarea>
             </div>
             <div class="form-group">
                 <label for="">Thumbnail</label>
-                <input type="text" class="form-control" id="" placeholder="Nhập Link ảnh thumb" name="add_thumb">
+                <input type="text" class="form-control" id="" placeholder="Nhập Link ảnh thumb" name="category_thumbnail" value="<?= $category['category_thumbnail'] ?? ''?>">
             </div>
-            <div class="form-group">
-                <label for="">Description</label>
-                <input type="text" class="form-control" id="" placeholder="Mô tả" name="slug">
-            </div>
-            <div class="form-group">
-                <label for="">Product Details</label>
-                <input type="text" class="form-control" id="" placeholder="Chi tiết mô tả" name="details">
-            </div>
-            <button type="submit" class="btn btn-primary">Create</a></button>
+            <button type="submit" class="btn btn-primary">Create</button>
         </form>
     </div>
 </body>

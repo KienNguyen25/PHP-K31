@@ -3,7 +3,7 @@
 
    $sql =  "SELECT * FROM categories";
 
-   $results = $conn->query($sql);
+   $results = $conn->query($sql);  
    
    $categories = array();
    while ($row = $results->fetch_assoc()){
