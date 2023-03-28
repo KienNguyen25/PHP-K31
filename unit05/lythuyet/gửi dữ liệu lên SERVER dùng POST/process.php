@@ -1,25 +1,25 @@
 <?php
-   $USER = "";
+   $user = "";
    $pass = "";
 
    if(isset($_POST['user'])){
-       $USER = $_POST['user'];
+       $user = $_POST['user'];
    }
    
    if(isset($_POST['pwd'])){
-    $pass = $_POST['user'];
+    $pass = $_POST['pwd'];
 }
 
-   if($USER == 'admin' && $pass = '123456'){
+   if($user == 'admin' && $pass == '123456'){
        echo 'đăng nhập thành công';
-   }else {;
+   }else {
     echo 'đăng nhập thất bại';
    }
 
 
-//    echo "<pre>";
-//        print_r($_POST);
-//    echo "</pre>";
+   echo "<pre>";
+       print_r($_POST);
+   echo "</pre>";
 
 
 

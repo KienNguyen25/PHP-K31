@@ -15,18 +15,21 @@
             //     return false;
             // }
             // $users = $users[0];
-            
             if(count($users) > 0){
                 $_SESSION['auth'] = [
                     'id' => $users['id'],
-                    'name' => $users['name']
+                    'name1' => $users['name1']
                 ];
+            //     echo "<pre>";
+            //     print_r($users);
+            // echo "</pre>";
+            // die();
                 return true;
             }else{
                 return false;
             }
+         
         }
-        
     }
 
     //      public function insert($data){

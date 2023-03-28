@@ -1,7 +1,7 @@
 <?php
     require_once("./Models/Category.php");
     require_once("./Controllers/BaseController.php");
-    class CategoryController extends BaseController{
+    class CategoryController extends BaseController {
         public function index(){
             $model = new Category();
             $categories = $model->getAll();

@@ -21,31 +21,18 @@
                 <main>
                 <div class="container">
         <h3 class="text-center">--- CATEGORIES ---</h3>
-    <a href="index.php?mod=Admin&act=created" class="btn btn-primary">Add New Category</a><br><br>
-        <table class="table">
+    <a href="index.php?mod=category&act=created" class="btn btn-primary">Add New Category</a><br><br>
+        <table class="table text-center">
             <thead>
                 <th>ID</th>
-                <th>Parent ID</th>
                 <th>Name</th>
-                <th>Description</th>
-                <th>Slug</th>
-                <th>Thumbnail</th>
-                <th>created_at</th>
                 <th>Action</th>
             </thead>
             <?php foreach($categories as $cate){?>
                 <tr>
                     <td><?= $cate['id']?></td>
-                    <td><?= $cate['parent_id']?></td>
                     <td><?= $cate['category_name']?></td>
-                    <td><?= $cate['category_description']?></td>
-                    <td><?= $cate['category_slug']?></td>
                     <td>
-                        <img src="<?= $cate['category_thumbnail']?>" width="100px" height="100px">
-                    </td>
-                    <td><?= $cate['category_created']?></td>
-                    <td>
-                        <a href="index.php?mod=category&act=details&id=<?=$cate['id']?>" class="btn btn-primary">Detail</a>
                         <a href="index.php?mod=category&act=edit&id=<?=$cate['id']?>" class="btn btn-success">Edit</a>
                         <a href="index.php?mod=category&act=delete&id=<?=$cate['id']?>" class="btn btn-danger">Delete</a>
                     </td>

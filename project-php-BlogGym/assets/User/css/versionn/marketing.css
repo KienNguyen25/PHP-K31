@@ -52,7 +52,7 @@ h6 {
 .market-header .navbar {
     padding-left: 3rem;
     padding-right: 3rem;
-    border: 6px solid #000000;
+    /* border: 6px solid #000000; */
     -webkit-box-shadow: inset 0px 0px 0px 1px #000000;
     -moz-box-shadow: inset 0px 0px 0px 1px #000000;
     box-shadow: inset 0px 0px 0px 1px #000000;
@@ -85,7 +85,7 @@ h6 {
 
 .btn {
     border-radius: 0 !important;
-    background-color: #000000 !important;
+    background-color: #4b4b4b !important;
     color: #ffffff !important;
 }
 
@@ -167,6 +167,7 @@ h6 {
     background-color: #ffffff;
     padding: 3rem 0;
     border-radius: 5px;
+    /* margin: 0 0 3rem 0 !important; */
 }
 
 .sidebar .widget {
@@ -345,12 +346,12 @@ a:focus,
 .fa-star,
 .pp a,
 .blog-list-widget small {
-    color: #f9ca27 !important;
+    color: #b2bec3 !important;
 }
 
 .market-header .navbar,
 .newsletter-widget.text-center {
-    border-color: #f9ca27;
+    border-color: #b2bec3;
 }
 
 .color-yellow a,
@@ -362,5 +363,5 @@ a:focus,
 .dropdown-item:hover,
 .bg-inverse {
     color: #111111 !important;
-    background-color: #f9ca27 !important;
+    background-color: #b2bec3 !important;
 }

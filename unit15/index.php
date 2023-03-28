@@ -7,6 +7,11 @@
     //     echo"Tham số act không tồn tại";
     //     exit();
     // }
+    session_start();
+    if(!isset($_GET['mod'])){
+        echo "Tham số không tồn tại";
+        exit();
+    }
     $mod = $_GET['mod']??'category';
     $act = $_GET['act']??'index';
 

@@ -27,19 +27,15 @@
                 <div class="container">
                 <h3 align="center">Add New Category</h3>
     <hr>
-    <form action="index.php?mod=admin&act=update" method="POST" role="form" enctype="multipart/form-data">
+    <form action="index.php?mod=category&act=update" method="POST" role="form" enctype="multipart/form-data">
     <input type="hidden" id="" placeholder="" name="id" value="<?= $category['id'] ?? ''?>">
     <div class="form-group">
                 <label for="">Name</label>
                 <input type="text" class="form-control" id="" placeholder="" name="category_name" value="<?= $category['category_name'] ?? ''?>">
             </div>
             <div class="form-group">
-                <label for="">Description</label><br>
-                <textarea name="category_description" id="" cols="50" rows="10" ><?= $category['category_description'] ?? '' ?></textarea>
-            </div>
-            <div class="form-group">
-                <label for="">Thumbnail</label>
-                <input type="text" class="form-control" id="" placeholder="Nhập Link ảnh thumb" name="category_thumbnail" value="<?= $category['category_thumbnail'] ?? ''?>">
+                <label for="">Parent_id</label>
+                <input type="text" class="form-control" id="" placeholder="" name="parent_id" value="<?= $category['parent_id'] ?? ''?>">
             </div>
             <button type="submit" class="btn btn-primary">Update</button>
         </form>

@@ -62,19 +62,28 @@
                 <div class="container">
                 <h3 align="center">Add New Category</h3>
            <hr>
-        <form action="index.php?mod=admin&act=store" method="POST" role="form" enctype="multipart/form-data">
+        <form action="index.php?mod=category&act=store" method="POST" role="form" enctype="multipart/form-data">
+       
+            <div class="form-group">
+                <label for="">Parent_id</label>
+                <input type="text" class="form-control" id="" placeholder="" name="parent_id">
+            </div>
             <div class="form-group">
                 <label for="">Name</label>
                 <input type="text" class="form-control" id="" placeholder="" name="category_name">
             </div>
-            <div class="form-group">
+            <!-- <div class="form-group">
+                <label for="">Banner</label><br><br>
+                <input type="text" class="form-control" id="" placeholder="Nhập Link ảnh thumb" name="banner">
+            </div><br><br> -->
+            <!-- <div class="form-group">
                 <label for="">Description</label><br>
                 <textarea name="category_description" id="" cols="150" rows="10" ></textarea>
             </div>
             <div class="form-group">
                 <label for="">Thumbnail</label><br><br>
                 <input type="text" class="form-control" id="" placeholder="Nhập Link ảnh thumb" name="category_thumbnail">
-            </div><br><br>
+            </div><br><br> -->
             <button type="submit" class="btn btn-primary">Create</button>
         </form
     </div>

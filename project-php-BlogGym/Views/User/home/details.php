@@ -1,3 +1,5 @@
+
+<!-- ------------- -->
 <!DOCTYPE html>
 <html lang="en">
 
@@ -17,22 +19,19 @@
     <!-- Site Icons -->
     <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
     <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
-    <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
+    
     <!-- Design fonts -->
     <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,700" rel="stylesheet"> 
-    
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.6.0/js/bootstrap.min.js">
-    
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" rel="stylesheet">
     <!-- Bootstrap core CSS -->
     <link href="./assets/User/css/bootstrap.css" rel="stylesheet">
-
+    
     <!-- FontAwesome Icons core CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.6.0/js/bootstrap.min.js">
     <link href="./assets/User/css/font-awesome.min.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
-    <!-- <link href="./assets/User/style.css" rel="stylesheet"> -->
-    <link href="./assets/User/style.css" >
-
+    <link rel="stylesheet" href="./assets/User/styles.css">
     <!-- Animate styles for this template -->
     <link href="./assets/User/css/animate.css" rel="stylesheet">
 
@@ -47,56 +46,54 @@
 
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-      <script src="https://oss.maxcdn.com/libs/respond../assets/User/js/1.4.2/respond.min.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 
 </head>
 <body>
 
     <div id="wrapper">
-      <!-- header --> 
-    <?php   include 'Views/User/partials/header.php'; ?>
+      <!-- header -->
+      <?php   include 'Views/User/partials/header.php'; ?>
+
 
    <!-- slider -->
    <?php  include 'Views/User/partials/slider.php'; ?>
+
         <section class="section lb">
             <div class="container">
-                <div class="row">
-                    <div class="col-lg-8 col-md-12 col-sm-12 col-xs-12">
+                <div class="ro">
+                    <div class="co">
                         <div class="page-wrapper">
                             <div class="blog-custom-build">
                                 <div class="blog-box wow fadeIn">
-            <?php foreach($categories as $cate){?>
-
+                             
                                     <div class="post-media">
-                                        <a href="markedia/marketing-single.php" title="">
-                                            <img src="<?= $cate['category_thumbnail']?>" alt="" class="img-fluid">
+                                        <a href="#" title="">
+                                            <img src="<?= $post['thumbnail']?>" alt="" class="img-fluid">
                                             <div class="hovereffect">
                                                 <span></span>
                                             </div>
                                             <!-- end hover -->
                                         </a>
                                     </div>
+
                                     <!-- end media -->
-                                    <div class="blog-meta big-meta text-center">
-                                        <h4><a href="marketing-single.php" title="">You can learn how to make money with your blog and videos</a></h4>
-                                        <p>Aenean interdum arcu blandit, vehicula magna non, placerat elit. Mauris et pharetratortor. Suspendissea sodales urna. In at augue elit. Vivamus enimcerat elicerat eli nibh, maximus ac felis nec, maximus tempor odio.</p>
-                                        <small><a href="marketing-category.php" title="">Make Money</a></small>
-                                        <small><a href="marketing-single.php" title="">24 July, 2017</a></small>
+                                    <div class="blog-meta big-meta ">
+                                  
+                                        <h4><a href="#" title=""><?= $post['name']?></a></h4>
+                                        <p><?= $post['description']?></p>
+                                        <small><a href="marketing-category.html" title="">Make Money</a></small>
+                                        <small><a href="marketing-single.html" title="">24 July, 2017</a></small>
                                         <small><a href="#" title="">by Jack</a></small>
                                         <small><a href="#" title=""><i class="fa fa-eye"></i> 2291</a></small>
                                     </div><!-- end meta -->
+             
                                 </div><!-- end blog-box -->
-                <?php }?>
-
                                 <hr class="invis">
-
-                      
                             </div>
                         </div>
-
                         <hr class="invis">
-
                         <div class="row">
                             <div class="col-md-12">
                                 <nav aria-label="Page navigation">
@@ -113,14 +110,10 @@
                         </div><!-- end row -->
                     </div><!-- end col -->
 
-                    <div class="col-lg-4 col-md-12 col-sm-12 col-xs-12">
-                       <!--  SIDEBAR -->
-                       <?php  include 'Views/User/partials/sidebar.php'; ?>
-
-                    </div><!-- end col -->
                 </div><!-- end row -->
             </div><!-- end container -->
         </section>
+
    
 
         <div class="dmtop">Scroll to Top</div>
@@ -130,12 +123,11 @@
 
     <!-- Core JavaScript
     ================================================== -->
-    <script src="./assets/User/js/jquery.min.js"></script>
-    <script src="./assets/User/js/tether.min.js"></script>
-    <script src="./assets/User/js/bootstrap.min.js"></script>
-    <script src="./assets/User/js/animate.js"></script>
-    <script src="./assets/User/js/custom.js"></script>
-
+    <script src="js/jquery.min.js"></script>
+    <script src="js/tether.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/animate.js"></script>
+    <script src="js/custom.js"></script>
 
 </body>
 </html>

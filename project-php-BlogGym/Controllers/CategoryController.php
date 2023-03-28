@@ -12,19 +12,37 @@
             $data['categories'] = $categories;
             // var_dump($data);
             // die();
-            $this->view('User/categories/list.php', $data);
+            // $this->view('User/categories/list.php', $data);
+            $this->view('Admin/categories/list.php', $data);
+
+            //Cần select from post table
+            //trả dữ liệu ra view
+            // $model = new post();
+            // $categories = $model->getAll();
+           // $data['categories'] = $categories;
+           // $this->view('User/categories/list.php', $data);
         }
          
-        public function marketing(){
-            $this->view('User/marketing/list.php');
-
+        public function created(){
+            $this->view('Admin/categories/created.php');
         }
-       
 
-            // public function created(){
-            //     $this->view('Admin/categories/created.php');
-            // }
-        public function edit(){
+        public function store(){
+            $data = $_POST;
+            $model = new Category();
+            $status = $model->insert($data);
+            header('location: index.php?mod=category&act=index');
+        }
+  
+    
+            public function update(){
+                $data = $_POST;
+                $model = new Category();
+                $status = $model->update($data);
+                header('location: index.php?mod=category&act=index');
+            }
+        
+             public function edit(){
             $model = new Category();
             $id = isset($_GET['id'])?$_GET['id']:0;
             $data['category'] = $model->find($id);
@@ -32,14 +50,7 @@
             // die();
             $this->view('Admin/categories/update.php',  $data);
         }
-
-        // public function update(){
-        //     $data = $_POST;
-        //     $model = new Category();
-        //     $status = $model->update($data);
-        //     header('location: index.php?mod=admin&act=index');
-        // }
-        
+            
         public function delete(){
             $model = new Category();
             $id = isset($_GET['id']) ? $_GET['id'] : 0;
@@ -47,9 +58,9 @@
             // die();
             $status = $model->delete($id);
             if($status == true){
-                header('location: index.php?mod=admin&act=index');
+                header('location: index.php?mod=category&act=index');
             }
-            header('location: index.php?mod=admin&act=index');
+            header('location: index.php?mod=category&act=index');
         }
 
         public function details(){
@@ -58,6 +69,18 @@
             $category = $model->details($id);
             
             require_once "./Views/Admin/categories/details.php";  
-        }
+        }  
+            // public function created(){
+            //     $this->view('Admin/categories/created.php');
+            // }
+       
+
+        // public function update(){
+        //     $data = $_POST;
+        //     $model = new Category();
+        //     $status = $model->update($data);
+        //     header('location: index.php?mod=admin&act=index');
+        // }
+      
     }
 ?>

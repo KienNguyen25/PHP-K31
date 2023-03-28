@@ -1,5 +1,6 @@
 <?php
     require_once('./Models/Connections.php');
+    require_once('./Models/Model.php');
     class category{
         public $conn;
         function __construct(){
@@ -28,7 +29,7 @@
         // }
 
         public function insert($data){
-            $query = 'INSERT INTO `categories`(`category_name`,`category_description`,`category_thumbnail`) VALUES ("' .$data['category_name'] . '","' . $data['category_description'] .'","' . $data['category_thumbnail'] . '")';
+            $query = 'INSERT INTO `categories`(`category_name`) VALUES ("' .$data['category_name'] . '")';
 
             return $this->conn->query($query);
         }
@@ -39,7 +40,7 @@
         }
 
         public function update($data){
-            $query = "UPDATE `categories` SET `category_name`='".$data['category_name'] ."',`category_description`='".$data['category_description'] ."', `category_thumbnail`='".$data['category_thumbnail'] ."' WHERE id = ".$data['id'];
+            $query = "UPDATE `categories` SET `category_name`='".$data['category_name'] ."' WHERE id = ".$data['id'];
 
             return $this->conn->query($query);
         }

@@ -12,6 +12,7 @@
                 require_once('./views/users/list.php');
             }
 
+
             public function create(){
                 header('location: ./views/users/create.php');
             }

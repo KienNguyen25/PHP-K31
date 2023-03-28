@@ -14,8 +14,10 @@
                             </a>
                             <div class="collapse" id="collapseLayouts" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
                                 <nav class="sb-sidenav-menu-nested nav">
-                                    <a class="nav-link" href="index.php?mod=category&act=index">Users</a>
-                                    <a class="nav-link" href="layout-sidenav-light.html">Light Sidenav</a>
+                                    <a class="nav-link" href="index.php?mod=show&act=home">Home page</a>
+                                    <a class="nav-link" href="index.php?mod=post&act=index">Post</a>
+                                    <a class="nav-link" href="index.php?mod=category&act=index">Category</a>
+                                    <a class="nav-link" href="index.php?mod=user&act=index">User</a>
                                 </nav>
                             </div>
                             <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapsePages" aria-expanded="false" aria-controls="collapsePages">
